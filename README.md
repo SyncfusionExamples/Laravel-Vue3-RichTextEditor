@@ -1,4 +1,5 @@
 # How to Integrate Syncfusion EJ2 Vue Components in Laravel project
+
 The following steps is used to Integrate Syncfusion EJ2 Vue Rich Text Editor in Laravel using Vite.
 
 Skip to the getting started section if you have already configured the environment.
@@ -6,6 +7,7 @@ Skip to the getting started section if you have already configured the environme
 ## Prerequisites
 
 Before getting started with Syncfusion Vue Rich Text Editor component in Laravel using Vite, check whether the following are installed in the developer machine.
+
 * [PHP](https://www.php.net/downloads.php) - To download PHP.
 * [Node.js](https://nodejs.org/en/download/) - To download Node.js.
 * [Laravel](https://laravel.com/docs/8.x/installation) - To install Laravel.
@@ -34,7 +36,6 @@ composer global require laravel/installer
 
 ## Create a Laravel project
 
-
 #### For Windows users
 
 ```bash
@@ -47,33 +48,42 @@ Now change the directory to the example-app folder.
 cd example-app
 ```
 
-
 ## Getting started from Laravel Project
+
 This section describes how to add the React, EJ2 Components from scratch to the Laravel Project.
 
 ### 1. Install dependencies
+
 In the command prompt, run the following commands to install the dependencies.
 
 Install the dependencies of the laravel project.
+
 ```bash
 composer install
 ```
+
 If you are getting any error while installing the dependencies, run the following command.
+
 ```bash
 composer install --ignore-platform-req=ext-fileinfo
 ```
 
 Install the vue js dependencies.
+
 ```bash
 npm install vue@next @vitejs/plugin-vue
 ```
+
 Install the Syncfusion EJ2 Vue Rich Text Editor package.
+
 ```bash
 npm install @syncfusion/ej2-vue-richtexteditor
 ```
 
 ### 2. Configure the vite.config.js file
+
 Add the following code to the vite.config.js file in the root directory of the project.
+
 ```js
 import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
@@ -96,8 +106,11 @@ export default defineConfig({
   ],
 });
 ```
+
 ### 3. Add the root element to the welcome.blade.php file
+
 Add the root element to the welcome.blade.php file in the resources/views folder.
+
 ``` html
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -123,6 +136,7 @@ Add the root element to the welcome.blade.php file in the resources/views folder
 ```
 
 ### 4. Add the following code to the app.js file to mount the Vue application
+
 ```js
 import { createApp } from "vue";
 import Welcome from "./Welcome.vue";
@@ -131,6 +145,7 @@ createApp(Welcome).mount("#app");
 ```
 
 ### 5. Create a Welcome.vue file in the resources/js folder and add the following code
+
 ```vue
 
 <template>
@@ -168,11 +183,15 @@ export default {
 </script>
 
 ```
+
 ## Run the Project
+
 To run the project run the following commands.
 
 ### 1. Build the project
+
 To build the project, run the following command.
+
 ```bash
 npm run build
 ```
@@ -186,9 +205,11 @@ php artisan key:generate
 ```
 
 ### 3. Run the project
+
 To run the project, run the following command.
+
 ```bash
 php artisan serve
 ```
 
-Visit http://localhost:8000 in your browser to see the Laravel application with the integrated Syncfusion EJ2 React Rich Text Editor.
+Visit <http://localhost:8000> in your browser to see the Laravel application with the integrated Syncfusion EJ2 Vue Rich Text Editor.
