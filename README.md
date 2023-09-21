@@ -1,4 +1,4 @@
-# How to run the project
+# How to Integrate Syncfusion EJ2 Vue Components in Laravel project
 The following steps is used to Integrate Syncfusion EJ2 Vue Rich Text Editor in Laravel using Vite.
 
 Skip to the getting started section if you have already configured the environment.
@@ -48,7 +48,8 @@ cd example-app
 ```
 
 
-## Getting started
+## Getting started from Laravel Project
+This section describes how to add the React, EJ2 Components from scratch to the Laravel Project.
 
 ### 1. Install dependencies
 In the command prompt, run the following commands to install the dependencies.
@@ -98,16 +99,27 @@ export default defineConfig({
 ### 3. Add the root element to the welcome.blade.php file
 Add the root element to the welcome.blade.php file in the resources/views folder.
 ``` html
-<html>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    …
+        <title>Laravel</title>
 
-    <body class=”antialiased">
-
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        
+        @vite(['resources/js/app.js', 'resources/css/app.css'])
+        <!-- Styles -->
+        <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
+    </head>
+    <body class="antialiased">
         <div id="app"></div>
-
     </body>
 </html>
+
 ```
 
 ### 4. Add the following code to the app.js file to mount the Vue application
@@ -156,16 +168,27 @@ export default {
 </script>
 
 ```
-### 6. Build the project
+## Run the Project
+To run the project run the following commands.
+
+### 1. Build the project
 To build the project, run the following command.
 ```bash
 npm run build
 ```
 
-### 7. Run the project
+### 2. Generate Key
+
+This section is only needed If the project is cloned from github.
+
+```bash
+php artisan key:generate
+```
+
+### 3. Run the project
 To run the project, run the following command.
 ```bash
 php artisan serve
 ```
 
-Visit http://localhost:8000 in your browser to see the Laravel application with the integrated Syncfusion EJ2 Vue Rich Text Editor.
+Visit http://localhost:8000 in your browser to see the Laravel application with the integrated Syncfusion EJ2 React Rich Text Editor.
