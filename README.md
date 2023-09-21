@@ -50,7 +50,7 @@ cd example-app
 
 ## Getting started from Laravel Project
 
-This section describes how to add the React, EJ2 Components from scratch to the Laravel Project.
+This section describes how to add the Vue, EJ2 Components from scratch to the Laravel Project.
 
 ### 1. Install dependencies
 
