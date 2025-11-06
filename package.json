@@ -6,13 +6,13 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "axios": "^1.6.0",
-        "laravel-vite-plugin": "^0.7.5",
-        "vite": "^4.5.3"
+        "axios": "^1.12.0",
+        "laravel-vite-plugin": "^2.0.1",
+        "vite": "^7.2.0"
     },
     "dependencies": {
-        "@syncfusion/ej2-vue-richtexteditor": "*",
-        "@vitejs/plugin-vue": "^4.2.3",
+        "@syncfusion/ej2-vue-richtexteditor": "^22.2.5",
+        "@vitejs/plugin-vue": "^4.6.2",
         "vue": "^3.2.36"
     }
 }
